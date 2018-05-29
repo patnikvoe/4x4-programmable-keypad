@@ -51,22 +51,22 @@ void setup() {
     // Keyboard.begin();
     Serial.begin(115200);
 
-    key[0][0]=21;
-    key[1][0]=20;
-    key[2][0]=19;
-    key[3][0]=18;
-    key[0][1]=15;
-    key[1][1]=14;
-    key[2][1]=16;
-    key[3][1]=10;
-    key[0][2]=5;
-    key[1][2]=6;
-    key[2][2]=7;
-    key[3][2]=8;
-    key[0][3]=9;
-    key[1][3]=2;
-    key[2][3]=3;
-    key[3][3]=4;
+    key[0][0]=20;
+    key[1][0]=21;
+    key[2][0]=2;
+    key[3][0]=3;
+    key[0][1]=18;
+    key[1][1]=19;
+    key[2][1]=4;
+    key[3][1]=5;
+    key[0][2]=15;
+    key[1][2]=14;
+    key[2][2]=6;
+    key[3][2]=7;
+    key[0][3]=16;
+    key[1][3]=10;
+    key[2][3]=8;
+    key[3][3]=9;
 
     // make pin 2 an input and turn on the pull-up resistor so it goes high unless
     // connected to ground:
