@@ -8,3 +8,7 @@
 * Sparkfun Pro Micro (5V or 3.3V shouldn't really matter) (1x)
 * PCB milled with eagle files provided or perfboard + wiring cables
 * 3D Printed Enclosure for looks + screws depending on your enclosure design (1x)
+
+## Files
+## Arduino Code
+## Eagle Files
