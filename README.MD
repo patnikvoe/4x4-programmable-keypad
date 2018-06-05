@@ -1,7 +1,7 @@
-4x4 Programmable Keyboard
+# 4x4 Programmable Keyboard
 
 
-# H1 Materials needed:
+## Materials needed:
 
 (16x) 6 mm x 6 mm Tacticle Button
 (16x) 51k Resistor 0603
