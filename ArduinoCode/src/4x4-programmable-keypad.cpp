@@ -5,51 +5,65 @@
  */
 
 #include <Arduino.h>
+#include "Keyboard.h"
 
 // Define Button pins
 int key[4][4];
 
 // define keys
-#define WINDOWS 0x83
-#define STRG 0x80
-#define ALT 0x82
-#define ALTGR 0x86
-#define SHIFT 0x81
-#define ENTER 0xB0
-#define TAB 0xB3
-#define BACKSPACE 0xB2
-#define ESC 0xB1
-#define ENTF 0xD4
-#define EINFG 0xD1
-#define ENDE 0xD5
-#define POS1 0xD2
-#define SPACE 0x20 // might be wrong
+char WINDOWS = KEY_LEFT_GUI;
+//char CTRL = KEY_LEFT_CTRL;
+char STRG = KEY_LEFT_CTRL;
+char ALT = KEY_LEFT_ALT;
+char ALTGR = KEY_RIGHT_ALT;
+char SHIFT = KEY_LEFT_SHIFT;
+char ENTER = KEY_RETURN;
+char TAB = KEY_TAB;
+char BACKSPACE = KEY_BACKSPACE;
+char ESC = KEY_ESC;
+//char DELETE = KEY_DELETE;
+char ENTF = KEY_DELETE;
+//char INSERT = KEY_INSERT;
+char EINFG = KEY_INSERT;
+//char END = KEY_END;
+char ENDE = KEY_END;
+//char HOME = KEY_HOME;
+char POS1 = KEY_HOME;
 // F-keys
-#define F1 0xC2
-#define F2 0xC3
-#define F3 0xC4
-#define F4 0xC5
-#define F5 0xC6
-#define F6 0xC7
-#define F7 0xC8
-#define F8 0xC9
-#define F9 0xCA
-#define F10 0xCB
-#define F11 0xCC
-#define F12 0xCD
+/*
+char F1 = KEY_F1;
+char F2 = KEY_F2;
+char F3 = KEY_F3;
+char F4 = KEY_F4;
+char F5 = KEY_F5;
+char F6 = KEY_F6;
+char F7 = KEY_F7;
+char F8 = KEY_F8;
+char F9 = KEY_F9;
+char F10 = KEY_F10;
+char F11 = KEY_F11;
+char F12 = KEY_F12;
+*/
 // Arrowkeys
-#define LINKS 0xD8
-#define RECHTS 0xD7
-#define OBEN 0xDA
-#define UNTEN 0xD9
+//char LEFT = KEY_LEFT_ARROW;
+char LINKS = KEY_LEFT_ARROW;
+//char RIGHT = KEY_RIGHT_ARROW;
+char RECHTS = KEY_RIGHT_ARROW;
+//char UP = KEY_UP_ARROW;
+char OBEN = KEY_UP_ARROW;
+//char DOWN = KEY_DOWN_ARROW;
+char UNTEN = KEY_DOWN_ARROW;
 // Page keys
-#define BILDAUF 0xD3
-#define BILDAB 0xD6
+//char PAGEUP = KEY_PAGE_UP;
+char BILDAUF = KEY_PAGE_UP;
+//char PAGEDOWN = KEY_PAGE_DOWN;
+char BILDAB = KEY_PAGE_DOWN;
 
 void setup() {
     // initialize control over the keyboard:
-    // Keyboard.begin();
+
     Serial.begin(115200);
+    Keyboard.begin();
 
     key[0][0]=20;
     key[1][0]=21;
@@ -89,68 +103,86 @@ void setup() {
 }
 
 void loop() {
+
   if (digitalRead(key[0][0]) == HIGH){
-    Serial.println(1);
-    delay(1000);
-  }
-  if (digitalRead(key[1][0]) == HIGH){
-    Serial.println(2);
-    delay(1000);
-  }
-  if (digitalRead(key[2][0]) == HIGH){
-    Serial.println(3);
-    delay(1000);
-  }
-  if (digitalRead(key[3][0]) == HIGH){
-    Serial.println(4);
-    delay(1000);
-  }
-  if (digitalRead(key[0][1]) == HIGH){
-    Serial.println(5);
-    delay(1000);
-  }
-  if (digitalRead(key[1][1]) == HIGH){
-    Serial.println(6);
-    delay(1000);
-  }
-  if (digitalRead(key[2][1]) == HIGH){
-    Serial.println(7);
-    delay(1000);
-  }
-  if (digitalRead(key[3][1]) == HIGH){
-    Serial.println(8);
-    delay(1000);
-  }
-  if (digitalRead(key[0][2]) == HIGH){
-    Serial.println(9);
-    delay(1000);
-  }
-  if (digitalRead(key[1][2]) == HIGH){
-    Serial.println(10);
-    delay(1000);
-  }
-  if (digitalRead(key[2][2]) == HIGH){
-    Serial.println(11);
-    delay(1000);
-  }
-  if (digitalRead(key[3][2]) == HIGH){
-    Serial.println(12);
-    delay(1000);
-  }
-  if (digitalRead(key[0][3]) == HIGH){
-    Serial.println(13);
-    delay(1000);
-  }
-  if (digitalRead(key[1][3]) == HIGH){
-    Serial.println(14);
-    delay(1000);
-  }
-  if (digitalRead(key[2][3]) == HIGH){
-    Serial.println(15);
-    delay(1000);
-  }
-  if (digitalRead(key[3][3]) == HIGH){
-    Serial.println(16);
-    delay(1000);
+    delay(50);
+    Keyboard.press(STRG);
+    Keyboard.press('l');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(100);
+
+    Keyboard.press(STRG);
+    Keyboard.press('c');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(100);
+
+    Keyboard.press(STRG);
+    Keyboard.press('l');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(100);
+
+    Keyboard.press(STRG);
+    Keyboard.press('b');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(500);
+  } else if (digitalRead(key[1][0]) == HIGH){
+    Keyboard.press(STRG);
+    Keyboard.press('x');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(500);
+  } else if (digitalRead(key[2][0]) == HIGH){
+    Keyboard.press(STRG);
+    Keyboard.press('c');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(500);
+  } else if (digitalRead(key[3][0]) == HIGH){
+    Keyboard.press(STRG);
+    Keyboard.press('v');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(500);
+  } else if (digitalRead(key[0][1]) == HIGH){
+    Keyboard.press(STRG);
+    Keyboard.press('a');
+    delay(50);
+    Keyboard.releaseAll();
+    delay(500);
+  } else if (digitalRead(key[1][1]) == HIGH){
+    Keyboard.press(POS1);
+    delay(50);
+    Keyboard.releaseAll();
+    delay(50);
+    Keyboard.write('%');
+    delay(50);
+    Keyboard.press(UNTEN);
+    delay(50);
+    Keyboard.releaseAll();
+    delay(50);
+  } else if (digitalRead(key[2][1]) == HIGH){
+
+  } else if (digitalRead(key[3][1]) == HIGH){
+
+  } else if (digitalRead(key[0][2]) == HIGH){
+
+  } else if (digitalRead(key[1][2]) == HIGH){
+
+  } else if (digitalRead(key[2][2]) == HIGH){
+
+  } else if (digitalRead(key[3][2]) == HIGH){
+
+  } else if (digitalRead(key[0][3]) == HIGH){
+
+  } else if (digitalRead(key[1][3]) == HIGH){
+
+  } else if (digitalRead(key[2][3]) == HIGH){
+
+  } else if (digitalRead(key[3][3]) == HIGH){
+
   }
 }
