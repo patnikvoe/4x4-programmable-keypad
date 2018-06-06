@@ -76,7 +76,7 @@ is awesome.
 
 ### Eagle Files
 Eagle Files were created in Version `9.0.1` of Autodesk Eagle. Newer versions should open it without problems, older versions might run into problems.
-
+![Boardlayout](/images/boardlayout.png)
 The folder `eagle/gerber-makerspace` contains the CAM files for the [UnternehmerTUM MakerSpace in Garching](https://www.maker-space.de). In case you have your own PCB mill or want to order some, you need to generate your own gerber files.
 
 You might be able to get rid of the resistors, if you change all `pinMode` from `INPUT` to `INPUT_PULLUP` in the file `code/src/4x4-programmable-keypad.cpp`. **I have  not tested this, so try this at your own risk.**
