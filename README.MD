@@ -1,4 +1,4 @@
-# 4x4 Programmable Keyboard
+INPUT_PULLUP# 4x4 Programmable Keyboard
 
 
 ## Materials needed:
@@ -23,4 +23,45 @@ Change the File name to `code/src/4x4-programmable-keypad.ino`.
 ### Eagle Files
 Eagle Files were created in Version `9.0.1` of Autodesk Eagle. Newer versions should open it without problems, older versions might run into problems.
 
+You might be able to get rid of the resistors if you change the code in the file `code/src/4x4-programmable-keypad.cpp`
+```cpp
+pinMode(key[0][0], INPUT);
+pinMode(key[1][0], INPUT);
+pinMode(key[2][0], INPUT);
+pinMode(key[3][0], INPUT);
+pinMode(key[0][1], INPUT);
+pinMode(key[1][1], INPUT);
+pinMode(key[2][1], INPUT);
+pinMode(key[3][1], INPUT);
+pinMode(key[0][2], INPUT);
+pinMode(key[1][2], INPUT);
+pinMode(key[2][2], INPUT);
+pinMode(key[3][2], INPUT);
+pinMode(key[0][3], INPUT);
+pinMode(key[1][3], INPUT);
+pinMode(key[2][3], INPUT);
+pinMode(key[3][3], INPUT);
+```
+to
+```cpp
+pinMode(key[0][0], INPUT_PULLUP);
+pinMode(key[1][0], INPUT_PULLUP);
+pinMode(key[2][0], INPUT_PULLUP);
+pinMode(key[3][0], INPUT_PULLUP);
+pinMode(key[0][1], INPUT_PULLUP);
+pinMode(key[1][1], INPUT_PULLUP);
+pinMode(key[2][1], INPUT_PULLUP);
+pinMode(key[3][1], INPUT_PULLUP);
+pinMode(key[0][2], INPUT_PULLUP);
+pinMode(key[1][2], INPUT_PULLUP);
+pinMode(key[2][2], INPUT_PULLUP);
+pinMode(key[3][2], INPUT_PULLUP);
+pinMode(key[0][3], INPUT_PULLUP);
+pinMode(key[1][3], INPUT_PULLUP);
+pinMode(key[2][3], INPUT_PULLUP);
+pinMode(key[3][3], INPUT_PULLUP);
+```
+
 The folder `eagle/gerber-makerspace` contains the CAM files for the [UnternehmerTUM MakerSpace in Garching](https://www.maker-space.de).
+### Enclosure
+`Work in progress`
