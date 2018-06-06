@@ -14,8 +14,9 @@ All files are stored in there respective folder. Code contains the C++ code for 
 ### Code
 The code was written and uploaded using the hackable texteditor "Atom" and the extentions "PlatformIO". If you want to use the Arduino IDE, you need to perform two little changes.
 Delete the following line or comment it out in the file `code/src/4x4-programmable-keypad.cpp` (Line 7)
-```#include <Arduino.h>
-```    
+```cpp
+#include <Arduino.h>
+```
 Change the File name to `code/src/4x4-programmable-keypad.ino`
 ### Eagle Files
 v9.0.1 or newer
