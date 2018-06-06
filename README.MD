@@ -61,6 +61,15 @@ pinMode(key[1][3], INPUT_PULLUP);
 pinMode(key[2][3], INPUT_PULLUP);
 pinMode(key[3][3], INPUT_PULLUP);
 ```
+You might also need to change the if-Statements from:
+```cpp
+if (digitalRead(key[0][0]) == HIGH){
+```
+to
+```cpp
+if (digitalRead(key[0][0]) == LOW){
+```
+This has not been tested so, try this on your own risk.
 
 The folder `eagle/gerber-makerspace` contains the CAM files for the [UnternehmerTUM MakerSpace in Garching](https://www.maker-space.de).
 ### Enclosure
