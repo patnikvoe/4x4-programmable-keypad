@@ -23,7 +23,7 @@ Change the File name to `code/src/4x4-programmable-keypad.ino`.
 
 ### Quick start in programming your keys
 Check the [Arduino Reference](https://www.arduino.cc/reference/en/language/functions/usb/keyboard/) for more detailed information.
-#### Keyboard.press()/Keyboard.release()/Keyboard.releaseAll()
+#### Keyboard.press(), Keyboard.release(), Keyboard.releaseAll()
 Press and release a single keys
 ```cpp
 Keyboard.press(ALT);    // press the left ALT key
@@ -49,7 +49,7 @@ for (int i=0;i<10;++i){   // repeat the key combination 10 times
   delay(200);             // Delay for 200 ms so it doesn't get run twice
 }
 ```
-#### Keyboard.print()/Keyboard.println()
+#### Keyboard.print(), Keyboard.println()
 You can also send strings to your computer. For this you can use the following commands.
 ```cpp
 Keyboard.print('My 4x4 Programmable Keypad ');
@@ -61,7 +61,7 @@ Returns:
 ```
 My 4x4 Programmable Keypad is awesome.
 ```
-
+If you want to have a line break at the end of the line you can use println.
 ```cpp
 Keyboard.println('My 4x4 Programmable Keypad ');
 delay(50);
