@@ -15,10 +15,12 @@ All files are stored in there respective folder. Code contains the C++ code for 
 The code was written and uploaded using the hackable texteditor "Atom" and the extentions "PlatformIO".
 
 If you want to use the Arduino IDE, you need to perform two little changes.
-Delete the following line or comment it out in the file `code/src/4x4-programmable-keypad.cpp` (Line 7)
+Delete the following line or comment it out in the file `code/src/4x4-programmable-keypad.cpp` (Line 7).
 ```cpp
 #include <Arduino.h>
 ```
-Change the File name to `code/src/4x4-programmable-keypad.ino`
+Change the File name to `code/src/4x4-programmable-keypad.ino`.
 ### Eagle Files
-v9.0.1 or newer
+Eagle Files were created in Version `9.0.1` of Autodesk Eagle. Newer versions should open it without problems, older versions might run into problems.
+
+The folder `eagle/gerber-makerspace` contains the CAM files for the [UnternehmerTUM MakerSpace in Garching](https://www.maker-space.de).
