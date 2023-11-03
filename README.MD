@@ -7,7 +7,8 @@ This project allows you to make a 4x4 programmable keypad. Its similar to standa
 * USB Micro Cable (1x)
 * Sparkfun Pro Micro (5V or 3.3V shouldn't really matter) (1x)
 * PCB milled with eagle files provided or perfboard + wiring cables
-* 3D Printed Enclosure for looks + screws depending on your enclosure design (1x)
+* 3D Printed Enclosure for looks (1x)
+* screws depending on your enclosure design 
 
 ## Files
 All files are stored in there respective folder. Code contains the C++ code for the Sparkfun Pro Micro. Eagle contains the Schematic and Board Files for the ECAD software "Autodesk Eagle".
